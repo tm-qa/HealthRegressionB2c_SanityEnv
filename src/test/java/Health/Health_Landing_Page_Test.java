@@ -27,8 +27,6 @@ public class Health_Landing_Page_Test extends TestBase {
 
     @Test(enabled = true)
     public void Health_Insurer() throws InterruptedException {
-        hlp.VerticalSelection();
-        //hlp.BuyNewPolicy();
     }
 
     @Test(enabled = true)

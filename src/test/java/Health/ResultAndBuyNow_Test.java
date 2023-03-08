@@ -9,9 +9,12 @@ import com.qa.turtlemint.util.LogUtils;
 import com.qa.turtlemint.util.TestUtil;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import util.RetryAnalyser;
+import util.iTestListener;
 
-
+@Listeners(iTestListener.class)
 @Test(groups = {"ResultAndBuyNow_Test","entire_health"})
 public class ResultAndBuyNow_Test extends TestBase {
 
@@ -31,7 +34,7 @@ public class ResultAndBuyNow_Test extends TestBase {
         resultPage = new ResultPage();
     }
 
-    @Test
+    @Test(retryAnalyzer= RetryAnalyser.class)
     public void resultPageForFloaterNormal() throws InterruptedException {
         Profilepage.Profile_page_Floater_Normal();
         leadpage.SaveLead(tl.NameGenerator());
@@ -40,7 +43,7 @@ public class ResultAndBuyNow_Test extends TestBase {
         LogUtils.info("Result page flow completed");
     }
 
-    @Test
+    @Test(retryAnalyzer= RetryAnalyser.class)
     public void resultPageForIndividual_Normal() throws InterruptedException {
         Profilepage.Profile_page_Idividual_Normal();
         leadpage.SaveLead(tl.NameGenerator());
@@ -50,7 +53,7 @@ public class ResultAndBuyNow_Test extends TestBase {
         LogUtils.info("Result page flow completed");
     }
 
-    @Test
+    @Test(retryAnalyzer= RetryAnalyser.class)
     public void resultPageForMulti_Individual() throws InterruptedException {
         Profilepage.Profile_page_Multi_Individual();
         leadpage.SaveLead(tl.NameGenerator());
@@ -59,7 +62,7 @@ public class ResultAndBuyNow_Test extends TestBase {
         LogUtils.info("Result page flow completed");
     }
 
-    @Test(enabled = true)
+    @Test(enabled = true,retryAnalyzer= RetryAnalyser.class)
     public void resultPageForComparePlan() throws InterruptedException {
         Profilepage.Profile_page_Compare_Page();
         leadpage.SaveLead(tl.NameGenerator());

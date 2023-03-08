@@ -2,15 +2,21 @@ package Health;
 
 import com.qa.turtlemint.base.TestBase;
 import com.qa.turtlemint.commands.WebCommands;
-import com.qa.turtlemint.pages.health.*;
-import com.qa.turtlemint.pages.login.LoginPage;
-import com.qa.turtlemint.pages.sell.GrowPageSellButton;
+import com.qa.turtlemint.pages.health.HealthLandingPage;
+import com.qa.turtlemint.pages.health.LeadNamePage;
+import com.qa.turtlemint.pages.health.Profile_page;
+import com.qa.turtlemint.pages.health.SharePlanPage;
 import com.qa.turtlemint.util.LogUtils;
 import com.qa.turtlemint.util.TestUtil;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import util.RetryAnalyser;
+import util.iTestListener;
 
+
+@Listeners(iTestListener.class)
 @Test(groups = {"ShareFunctionalityTest","entire_health"})
 public class ShareFunctionalityTest extends TestBase {
 
@@ -33,7 +39,7 @@ public class ShareFunctionalityTest extends TestBase {
         leadpage = new LeadNamePage();
         sp = new SharePlanPage();
     }
-    @Test(enabled = true)
+    @Test(enabled = true,retryAnalyzer= RetryAnalyser.class)
     public void ShareVideoFromPDP() throws InterruptedException {
         Profilepage.Profile_page_Idividual_Normal();
         leadpage.SaveLead(tl.NameGenerator());
@@ -41,7 +47,7 @@ public class ShareFunctionalityTest extends TestBase {
         sp.ShareVideoFromPDP();
         LogUtils.info("Share Result flow completed");
     }
-    @Test(enabled = true)
+    @Test(enabled = true,retryAnalyzer= RetryAnalyser.class)
     public void ShareHospitalFromPDP() throws InterruptedException {
         Profilepage.Profile_page_Idividual_Normal();
         leadpage.SaveLead(tl.NameGenerator());
@@ -50,7 +56,7 @@ public class ShareFunctionalityTest extends TestBase {
         LogUtils.info("Share Result flow completed");
     }
 
-    @Test(enabled = true)
+    @Test(enabled = true,retryAnalyzer= RetryAnalyser.class)
     public void CheckPolicyDocumentsOnPDP() throws InterruptedException {
         WebCommands.staticSleep(4000);
         Profilepage.Profile_page_Idividual_Normal();

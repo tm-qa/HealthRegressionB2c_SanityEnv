@@ -10,7 +10,12 @@ import com.qa.turtlemint.util.LogUtils;
 import com.qa.turtlemint.util.TestUtil;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import util.RetryAnalyser;
+import util.iTestListener;
+
+@Listeners(iTestListener.class)
 @Test(groups = {"Checkout_page_Test","entire_health"})
 public class Checkout_page_Test extends TestBase {
     public Checkout_page_Test() {
@@ -39,7 +44,7 @@ public class Checkout_page_Test extends TestBase {
         ninjapage = new ninja();
     }
 
-    @Test(enabled = true)
+    @Test(enabled = true,retryAnalyzer= RetryAnalyser.class)
     public void Floater_NormalFlow_For_GoDigit() throws InterruptedException {
         Profilepage.Profile_page_Floater_Normal();
         leadpage.SaveLead(tl.NameGenerator());
@@ -51,7 +56,7 @@ public class Checkout_page_Test extends TestBase {
         LogUtils.info("Checkout flow completed");
     }
 
-    @Test(enabled = true)
+    @Test(enabled = true,retryAnalyzer= RetryAnalyser.class)
     public void Individual_Normal_Flow_For_ICICI() throws Exception {
         Profilepage.Profile_page_Idividual_Normal();
         leadpage.SaveLead(tl.NameGenerator());
@@ -62,7 +67,7 @@ public class Checkout_page_Test extends TestBase {
         LogUtils.info("Checkout flow completed");
     }
 
-    @Test(enabled = true)
+    @Test(enabled = true,retryAnalyzer= RetryAnalyser.class)
     public void Multi_Individual_Flow_For_ManipalCigna() throws Exception {
         Profilepage.Profile_page_Multi_Individual();
         leadpage.SaveLead(tl.NameGenerator());
@@ -74,7 +79,7 @@ public class Checkout_page_Test extends TestBase {
         LogUtils.info("Checkout flow completed");
     }
 
-    @Test(enabled = true)
+    @Test(enabled = true,retryAnalyzer= RetryAnalyser.class)
     public void Compare_Page() throws InterruptedException {
         Profilepage.Profile_page_Compare_Page();
         leadpage.SaveLead(tl.NameGenerator());

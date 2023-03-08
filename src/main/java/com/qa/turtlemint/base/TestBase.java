@@ -76,6 +76,8 @@ public class TestBase {
 
 
             driver.get(System.getProperty("url"));
+            String strUrl = driver.getCurrentUrl();
+            LogUtils.info("Opened Website: " + strUrl);
      //         driver.get(prop.getProperty("localurl"));
         }
 

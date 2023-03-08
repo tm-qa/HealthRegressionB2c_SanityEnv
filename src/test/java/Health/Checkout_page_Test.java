@@ -41,8 +41,6 @@ public class Checkout_page_Test extends TestBase {
 
     @Test(enabled = true)
     public void Floater_NormalFlow_For_GoDigit() throws InterruptedException {
-        hlp.VerticalSelection();
-        //hlp.BuyNewPolicy();
         Profilepage.Profile_page_Floater_Normal();
         leadpage.SaveLead(tl.NameGenerator());
         WebCommands.staticSleep(10000);
@@ -55,8 +53,6 @@ public class Checkout_page_Test extends TestBase {
 
     @Test(enabled = true)
     public void Individual_Normal_Flow_For_ICICI() throws Exception {
-        hlp.VerticalSelection();
-        //hlp.BuyNewPolicy();
         Profilepage.Profile_page_Idividual_Normal();
         leadpage.SaveLead(tl.NameGenerator());
         resultPage.whyIsThisPlanBestForYou();
@@ -68,8 +64,6 @@ public class Checkout_page_Test extends TestBase {
 
     @Test(enabled = true)
     public void Multi_Individual_Flow_For_ManipalCigna() throws Exception {
-        hlp.VerticalSelection();
-        //hlp.BuyNewPolicy();
         Profilepage.Profile_page_Multi_Individual();
         leadpage.SaveLead(tl.NameGenerator());
         WebCommands.staticSleep(5000);
@@ -82,8 +76,6 @@ public class Checkout_page_Test extends TestBase {
 
     @Test(enabled = true)
     public void Compare_Page() throws InterruptedException {
-        hlp.VerticalSelection();
-        //hlp.BuyNewPolicy();
         Profilepage.Profile_page_Compare_Page();
         leadpage.SaveLead(tl.NameGenerator());
         resultPage.comparePlan();

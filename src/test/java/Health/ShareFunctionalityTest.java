@@ -32,8 +32,6 @@ public class ShareFunctionalityTest extends TestBase {
         tl = new TestUtil();
         leadpage = new LeadNamePage();
         sp = new SharePlanPage();
-        hlp.VerticalSelection();
-        //hlp.BuyNewPolicy();
     }
     @Test(enabled = true)
     public void ShareVideoFromPDP() throws InterruptedException {

@@ -33,8 +33,6 @@ public class ResultAndBuyNow_Test extends TestBase {
 
     @Test
     public void resultPageForFloaterNormal() throws InterruptedException {
-        hlp.VerticalSelection();
-        //hlp.BuyNewPolicy();
         Profilepage.Profile_page_Floater_Normal();
         leadpage.SaveLead(tl.NameGenerator());
         WebCommands.staticSleep(5000);
@@ -44,8 +42,6 @@ public class ResultAndBuyNow_Test extends TestBase {
 
     @Test
     public void resultPageForIndividual_Normal() throws InterruptedException {
-        hlp.VerticalSelection();
-        //hlp.BuyNewPolicy();
         Profilepage.Profile_page_Idividual_Normal();
         leadpage.SaveLead(tl.NameGenerator());
         resultPage.whyIsThisPlanBestForYou();
@@ -56,8 +52,6 @@ public class ResultAndBuyNow_Test extends TestBase {
 
     @Test
     public void resultPageForMulti_Individual() throws InterruptedException {
-        hlp.VerticalSelection();
-        //hlp.BuyNewPolicy();
         Profilepage.Profile_page_Multi_Individual();
         leadpage.SaveLead(tl.NameGenerator());
         resultPage.multiIndividual();
@@ -67,8 +61,6 @@ public class ResultAndBuyNow_Test extends TestBase {
 
     @Test(enabled = true)
     public void resultPageForComparePlan() throws InterruptedException {
-        hlp.VerticalSelection();
-        //hlp.BuyNewPolicy();
         Profilepage.Profile_page_Compare_Page();
         leadpage.SaveLead(tl.NameGenerator());
         resultPage.comparePlan();

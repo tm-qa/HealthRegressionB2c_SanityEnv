@@ -1,0 +1,1 @@
+{"uuid":"85f5391e-e2b8-4488-91ce-df36d4820dc7","name":"Health.Checkout_page_Test.Close","children":["16070d2a-3ecf-44ea-904b-6e166a2264b0"],"description":"","befores":[],"afters":[{"name":"Close","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1678271253271,"stop":1678271253378}],"start":1678271253269,"stop":1678271253378}

@@ -12,11 +12,12 @@ import org.testng.annotations.Test;
 import util.iTestListener;
 
 @Listeners(iTestListener.class)
-@Test(groups = {"Health_Landing_Page_Test","entire_health"})
+@Test(groups = {"Health_Landing_Page_Test", "entire_health"})
 public class Health_Landing_Page_Test extends TestBase {
     public Health_Landing_Page_Test() {
         super();
     }
+
     HealthLandingPage hlp;
 
     @BeforeMethod()
@@ -29,23 +30,6 @@ public class Health_Landing_Page_Test extends TestBase {
     public void Health_Insurer() throws InterruptedException {
     }
 
-    @Test(enabled = true)
-    public void BecomePosp()
-    {
-        hlp.posp();
-    }
-
-    @Test(enabled = true)
-    public void JoinPosp()
-    {
-        hlp.Joinposp();
-    }
-
-    @Test(enabled = true)
-    public void SpeakToAdvisor()
-    {
-        hlp.contactTMAdvisor();
-    }
 
     @AfterMethod
     public void Close() {
